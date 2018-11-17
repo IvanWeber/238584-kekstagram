@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Иван Бедный](https://up.htmlacademy.ru/javascript/16/user/238584).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Чудновский] (https://htmlacademy.ru/profile/id29109).
 
 ---
 
