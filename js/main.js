@@ -87,10 +87,6 @@ var multiInsert = function (photosDescription, pictureObjectsArray) {
 
 multiInsert(photosDescriptor(25), makeAnotherUsersPictures(25));
 
-// var bigPic = document.querySelector('.big-picture');
-// var bigPicComment = bigPic.querySelector('social__comments');
-// console.log(bigPicComment);
-
 var bigPicFilling = function (photos) {
   var pictureObjectsArray = makeAnotherUsersPictures(photos);
   console.log(pictureObjectsArray[0].comment[0]);
