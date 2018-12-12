@@ -89,13 +89,11 @@ multiInsert(photosDescriptor(25), makeAnotherUsersPictures(25));
 
 var bigPicFilling = function (photos) {
   var pictureObjectsArray = makeAnotherUsersPictures(photos);
-  console.log(pictureObjectsArray[0].comment[0]);
   var bigPic = document.querySelector('.big-picture');
   bigPic.classList.remove('hidden');
   var divBigPic = bigPic.querySelector('.big-picture__img');
   var bigPicImg = divBigPic.querySelector('img');
   bigPicImg.src = pictureObjectsArray[0].img.src;
-  console.log(pictureObjectsArray);
   var bigPicLikesCount = bigPic.querySelector('.likes-count');
   bigPicLikesCount.textContent = pictureObjectsArray[0].likes.textContent;
   var bigPicCommentsCount = bigPic.querySelector('.comments-count');
