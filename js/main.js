@@ -95,7 +95,7 @@ multiInsert(makeAnotherUsersPictures(25));
 var bigPicFilling = function (pictureObject) {
 
   var pictureObjectArray = makeAnotherUsersPictures(1);
-  var pictureObject = pictureObjectArray[0];
+  pictureObject = pictureObjectArray[0];
 
   var bigPic = document.querySelector('.big-picture');
   bigPic.classList.remove('hidden');
