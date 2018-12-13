@@ -26,7 +26,7 @@ var photosDescriptor = function (photos) {
       {
         url: 'photos/' + (i + 1) + '.jpg',
         likes: getRandomInt(15, 201),
-        comments: []
+        comments: [],
       };
     var jMax = getRandomInt(0, 2);
     for (var j = 0; j <= jMax; j++) {
@@ -50,19 +50,19 @@ var makeAnotherUsersPictures = function (photos) {
     var templateContent = {
       img: picture.querySelector('.picture__img').cloneNode(true),
       likes: picture.querySelector('.picture__likes').cloneNode(true),
-      comments: []
+      comments: [],
     };
     for (var j = 0; j < photosDescription[i].comments.length; j++) {
       templateContent.comments[j] = picture.querySelector('.picture__likes').cloneNode(true);
       templateContent.comments[j].textContent = photosDescription[i].comments[j].message;
     }
-    picture.querySelector('.picture__likes').cloneNode(true), picture.querySelector('.picture__likes').cloneNode(true)
+    picture.querySelector('.picture__likes').cloneNode(true), picture.querySelector('.picture__likes').cloneNode(true);
     templateContent.img.src = photosDescription[i].url;
     templateContent.likes.textContent = photosDescription[i].likes;
     pictureObjectsArray[i] = {
       img: templateContent.img,
       likes: templateContent.likes,
-      comments: []
+      comments: [],
     };
     for (var j = 0; j < photosDescription[i].comments.length; j++) {
       pictureObjectsArray[i].comments[j] = templateContent.comments[j];
@@ -89,7 +89,7 @@ var multiInsert = function (pictureObjectsArray) {
   }
   var section = document.querySelector('.pictures');
   section.appendChild(documentFragmentVar);
-}
+};
 
 multiInsert(makeAnotherUsersPictures(25));
 
@@ -108,33 +108,33 @@ var bigPicFilling = function (pictureObject) {
   var bigPicCommentsCount = bigPic.querySelector('.comments-count');
   bigPicCommentsCount.textContent = pictureObject.comments.length;
   var bigPicComments = bigPic.querySelector('.social__comments');
-  for(var j = 0, k = 1; j < pictureObject.comments.length; j++, k++) {
+  for (var j = 0, k = 1; j < pictureObject.comments.length; j++, k++) {
     var liComment = bigPicComments.querySelector('li:nth-child(' + k + ')');
     var imgComment = liComment.querySelector('img');
     imgComment.src = 'img/avatar-' + getRandomInt(1, 7) + '.svg';
     var pComment = liComment.querySelector('p');
     pComment.textContent = pictureObject.comments[j].textContent;
   }
-    if (j !== 2) {
-      liComment = bigPicComments.querySelector('li:nth-child(2)');
-      liComment.remove();
-    }
-}
+  if (j !== 2) {
+    liComment = bigPicComments.querySelector('li:nth-child(2)');
+    liComment.remove();
+  }
+};
 
 bigPicFilling(makeAnotherUsersPictures(1));
 
 var photoDescriptionInsert = function (string) {
   var socialCaption = document.querySelector('.social__caption');
   socialCaption.textContent = string;
-}
+};
 
 photoDescriptionInsert('Тестируем новую камеру!');
 
 var hideElements = function () {
-  var socialCommentCount = document.querySelector('.social__comment-count')
+  var socialCommentCount = document.querySelector('.social__comment-count');
   socialCommentCount.classList.add('visually-hidden');
   var commentsLoader = document.querySelector('.comments-loader');
   commentsLoader.classList.add('visually-hidden');
-}
+};
 
 hideElements();
