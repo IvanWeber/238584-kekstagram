@@ -4,22 +4,23 @@ var getRandomInt = function (min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
+var COMMENT_PHRASE = [
+  'Всё отлично!',
+  'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.'
+];
+
+var NAMES = [
+  'Артём',
+  'Сергей',
+  'Иван',
+  'Михаил',
+  'Руслан'
+];
+
+
 var photosDescriptor = function (photos) {
 
   var photosDescription = [];
-
-  var commentPhrase = [
-    'Всё отлично!',
-    'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.'
-  ];
-
-  var nameArray = [
-    'Артём',
-    'Сергей',
-    'Иван',
-    'Михаил',
-    'Руслан'
-  ];
 
   for (var i = 0; i < photos; i++) {
     photosDescription[i] = [
@@ -28,13 +29,13 @@ var photosDescriptor = function (photos) {
         likes: getRandomInt(15, 201),
         comment: [{
           avatar: 'img/avatar-' + (i+1) + '.svg',
-          message: commentPhrase [getRandomInt(0, commentPhrase.length)],
-          name: nameArray [getRandomInt(0, nameArray.length)]
+          message: COMMENT_PHRASE [getRandomInt(0, COMMENT_PHRASE.length)],
+          name: NAMES [getRandomInt(0, NAMES.length)]
         },
         {
           avatar: 'img/avatar-' + (i+1) + '.svg',
-          message: commentPhrase [getRandomInt(0, commentPhrase.length)],
-          name: nameArray [getRandomInt(0, nameArray.length)]
+          message: COMMENT_PHRASE [getRandomInt(0, COMMENT_PHRASE.length)],
+          name: NAMES [getRandomInt(0, NAMES.length)]
         }
         ]
       }
