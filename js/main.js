@@ -56,7 +56,6 @@ var makeAnotherUsersPictures = function (photos) {
       templateContent.comments[j] = picture.querySelector('.picture__likes').cloneNode(true);
       templateContent.comments[j].textContent = photosDescription[i].comments[j].message;
     }
-    picture.querySelector('.picture__likes').cloneNode(true), picture.querySelector('.picture__likes').cloneNode(true);
     templateContent.img.src = photosDescription[i].url;
     templateContent.likes.textContent = photosDescription[i].likes;
     pictureObjectsArray[i] = {
